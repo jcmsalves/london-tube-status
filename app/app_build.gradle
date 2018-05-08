@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion Versions.compileSdk
+    defaultConfig {
+        applicationId "com.jcmsalves.londontubestatus"
+        minSdkVersion Versions.minSdkVersion
+        targetSdkVersion Versions.targetSdk
+        versionCode Versions.releaseVersionCode
+        versionName Versions.releaseVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+configurations {
+    ktlint
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // module dependencies
+    implementation project(ProjectModules.data)
+    implementation project(ProjectModules.domain)
+
+    // external dependencies
+    implementation ProjectDependencies.kotlin
+    implementation ProjectDependencies.supportAppCompat
+
+    implementation ProjectDependencies.daggerAndroid
+    implementation ProjectDependencies.daggerAndroidSupport
+    kapt ProjectDependencies.daggerAnnotationProcessor
+    kapt ProjectDependencies.daggerCompiler
+
+    implementation ProjectDependencies.rxJava2
+    implementation ProjectDependencies.rxAndroid
+
+    ktlint ProjectDependencies.ktlint
+
+    testImplementation ProjectDependencies.junit
+    testImplementation ProjectDependencies.assertJ
+    testImplementation ProjectDependencies.mockitoKotlin
+    androidTestImplementation ProjectDependencies.androidTestRunner
+    androidTestImplementation ProjectDependencies.espresso
+}
+
+task ktlint(type: JavaExec, group: "verification") {
+    description = "Check Kotlin code style."
+    classpath = configurations.ktlint
+    main = "com.github.shyiko.ktlint.Main"
+    args "--reporter=plain",
+            "--reporter=checkstyle,output=${buildDir}/reports/ktlint/checkstyle.xml",
+            "${projectDir}/**/src/**/*.kt"
+}

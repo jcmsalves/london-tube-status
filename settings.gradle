@@ -1,1 +1,13 @@
 include ':app'
+include ':domain'
+include ':data'
+
+void rename_build_file_to_module_name(project) {
+    project.buildFileName = "${project.name}_build.gradle"
+    project.children.each { child -> rename_build_file_to_module_name(child) }
+}
+
+// Will rename every module's build.gradle file to use its name instead of `build`.
+// E.g. `app/build.gradle` will become `app/app.gradle`
+// The root build.gradle file will remain untouched
+rootProject.children.each { subproject -> rename_build_file_to_module_name(subproject) }

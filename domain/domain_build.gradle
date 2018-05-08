@@ -1,0 +1,39 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+repositories {
+    jcenter()
+}
+
+configurations {
+    ktlint
+}
+
+dependencies {
+    // external dependencies
+    implementation ProjectDependencies.kotlin
+    ktlint ProjectDependencies.ktlint
+
+    // dagger annotations
+    implementation ProjectDependencies.javaInject
+
+    // rxjava 2
+    implementation ProjectDependencies.rxJava2
+
+    // testing dependencies
+    testImplementation ProjectDependencies.junit
+    testImplementation ProjectDependencies.assertJ
+    testImplementation ProjectDependencies.mockitoKotlin
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+task ktlint(type: JavaExec, group: "verification") {
+    description = "Check Kotlin code style."
+    classpath = configurations.ktlint
+    main = "com.github.shyiko.ktlint.Main"
+    args "--reporter=plain",
+            "--reporter=checkstyle,output=${buildDir}/reports/ktlint/checkstyle.xml",
+            "${projectDir}/**/src/**/*.kt"
+}
