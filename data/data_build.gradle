@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
+
+apply from: '../config/android-common.gradle'
+apply from: '../config/common.gradle'
 
 android {
     compileSdkVersion Versions.compileSdk
@@ -21,47 +21,13 @@ android {
     }
 }
 
-configurations {
-    ktlint
-}
-
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     // project dependencies
     implementation project(ProjectModules.domain)
 
-    // external dependencies
+    // retrofit / network dependencies
     api ProjectDependencies.retrofit
     implementation ProjectDependencies.rxJava2Adapter
     implementation ProjectDependencies.gson
     implementation ProjectDependencies.loggingInterceptor
-
-    implementation ProjectDependencies.kotlin
-
-    implementation ProjectDependencies.daggerAndroid
-    implementation ProjectDependencies.daggerAndroidSupport
-    kapt ProjectDependencies.daggerAnnotationProcessor
-    kapt ProjectDependencies.daggerCompiler
-
-    implementation ProjectDependencies.rxJava2
-    implementation ProjectDependencies.rxAndroid
-    ktlint ProjectDependencies.ktlint
-
-    // testing dependencies
-    testImplementation ProjectDependencies.junit
-    testImplementation ProjectDependencies.assertJ
-    testImplementation ProjectDependencies.mockitoKotlin
-    androidTestImplementation ProjectDependencies.androidTestRunner
-    androidTestImplementation ProjectDependencies.espresso
-
-}
-
-task ktlint(type: JavaExec, group: "verification") {
-    description = "Check Kotlin code style."
-    classpath = configurations.ktlint
-    main = "com.github.shyiko.ktlint.Main"
-    args "--reporter=plain",
-            "--reporter=checkstyle,output=${buildDir}/reports/ktlint/checkstyle.xml",
-            "${projectDir}/**/src/**/*.kt"
 }
