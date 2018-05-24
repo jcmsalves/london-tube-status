@@ -13,6 +13,8 @@ You can check all the articles below:
 ### Articles Index
 1. [London Tube Status App — setting up](https://medium.com/@jcmsalves/london-tube-status-app-setting-up-d96149d0504b "London Tube Status App — setting up")
 
+2. [London Tube Status App - gradle cleanup and dagger](https://medium.com/@jcmsalves/london-tube-status-app-gradle-cleanup-and-dagger-176d1e307778 "London Tube Status App - gradle cleanup and dagger")
+
 ----
 
 If you have any cool ideas or suggestions feel free to open issues in the repo and I'll try to address in a future article.
