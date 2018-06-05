@@ -15,6 +15,8 @@ You can check all the articles below:
 
 2. [London Tube Status App - gradle cleanup and dagger](https://medium.com/@jcmsalves/london-tube-status-app-gradle-cleanup-and-dagger-176d1e307778 "London Tube Status App - gradle cleanup and dagger")
 
+3. [London Tube Status App - Retrofit and API setup](https://medium.com/@jcmsalves/london-tube-status-app-api-setup-b93e10dd64a "London Tube Status App - Retrofit and API setup")
+
 ----
 
 If you have any cool ideas or suggestions feel free to open issues in the repo and I'll try to address in a future article.

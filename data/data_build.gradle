@@ -14,7 +14,15 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField 'String', "AppId", LondonTubeStatus_AppId
+            buildConfigField 'String', "AppKey", LondonTubeStatus_AppKey
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
         release {
+            buildConfigField 'String', "AppId", LondonTubeStatus_AppId
+            buildConfigField 'String', "AppKey", LondonTubeStatus_AppKey
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
