@@ -3,6 +3,7 @@ package com.jcmsalves.londontubestatus.di
 import com.jcmsalves.data.status.StatusRepositoryImpl
 import com.jcmsalves.data.status.StatusService
 import com.jcmsalves.data.status.model.LineStatusModelToLineStatusMapper
+import com.jcmsalves.domain.status.StatusRepository
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -14,5 +15,5 @@ class RepositoryModule {
     @Singleton
     fun providesStatusRepository(statusService: StatusService,
                                  mapper: LineStatusModelToLineStatusMapper):
-        StatusRepositoryImpl = StatusRepositoryImpl(statusService, mapper)
+        StatusRepository = StatusRepositoryImpl(statusService, mapper)
 }

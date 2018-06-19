@@ -17,6 +17,8 @@ You can check all the articles below:
 
 3. [London Tube Status App - Retrofit and API setup](https://medium.com/@jcmsalves/london-tube-status-app-api-setup-b93e10dd64a "London Tube Status App - Retrofit and API setup")
 
+4. [London Tube Status App - wrapping up the data layer](https://medium.com/@jcmsalves/london-tube-status-app-wrapping-up-the-data-layer-a2288487c209 "London Tube Status App - wrapping up the data layer")
+
 ----
 
 If you have any cool ideas or suggestions feel free to open issues in the repo and I'll try to address in a future article.

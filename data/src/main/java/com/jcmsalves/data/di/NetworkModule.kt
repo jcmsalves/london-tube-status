@@ -2,6 +2,7 @@ package com.jcmsalves.data.di
 
 import com.jcmsalves.data.BuildConfig
 import com.jcmsalves.data.interceptors.AuthInterceptor
+import com.jcmsalves.data.status.StatusService
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -39,4 +40,7 @@ class NetworkModule {
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .build()
+
+    @Provides
+    fun provideStatusService(retrofit: Retrofit): StatusService = retrofit.create(StatusService::class.java)
 }
