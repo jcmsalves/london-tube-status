@@ -2,16 +2,16 @@ package com.jcmsalves.data.status.model
 
 import com.google.gson.annotations.SerializedName
 
-data class LineStatus(
+data class LineStatusModel(
     @SerializedName("id")
     val id: String,
     @SerializedName("name")
     val name: String,
     @SerializedName("lineStatuses")
-    val statuses: List<Status>
+    val statusModels: List<StatusModel>
 )
 
-data class Status(
+data class StatusModel(
     @SerializedName("statusSeverity")
     val severityLevel: String,
     @SerializedName("statusSeverityDescription")
