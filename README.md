@@ -2,7 +2,7 @@
 
 This project follows a series of articles on Medium that follow the journey of creating a simple Android app to display London Underground lines statuses.
 
-It will be done using Clean Architecture and the plan is for it to be 100% Kotlin. Initially just code but eventual;ly move gradle scripts to Kotlin as well using Kotlin DSL.
+It will be done using Clean Architecture and the plan is for it to be 100% Kotlin. Initially just code but eventually move gradle scripts to Kotlin as well using Kotlin DSL.
 
 Each article will be tagged in the ``article_#`` format so it's easier to track all changes.
 
@@ -18,6 +18,8 @@ You can check all the articles below:
 3. [London Tube Status App - Retrofit and API setup](https://medium.com/@jcmsalves/london-tube-status-app-api-setup-b93e10dd64a "London Tube Status App - Retrofit and API setup")
 
 4. [London Tube Status App - wrapping up the data layer](https://medium.com/@jcmsalves/london-tube-status-app-wrapping-up-the-data-layer-a2288487c209 "London Tube Status App - wrapping up the data layer")
+
+5. [London Tube Status App - domain layer](https://medium.com/@jcmsalves/london-tube-status-app-domain-layer-711eddf4e572 "London Tube Status App - domain layer")
 
 ----
 

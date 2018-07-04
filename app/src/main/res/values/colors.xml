@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorLightGrey">#9B9B9B</color>
+
+    <!--Line status colors-->
+    <color name="colorGreen">#57C134</color>
+    <color name="colorOrange">#F5A623</color>
+    <color name="colorRed">#D0021B</color>
 </resources>
