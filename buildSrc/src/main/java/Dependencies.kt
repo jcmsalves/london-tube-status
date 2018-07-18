@@ -26,7 +26,8 @@ object ProjectDependencies {
     val rxJava2 = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
     val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
 
-    val supportAppCompat = "com.android.support:appcompat-v7:${Versions.appcompat}"
+    val supportAppCompat = "com.android.support:appcompat-v7:${Versions.supportLibrary}"
+    val recyclerView = "com.android.support:recyclerview-v7:${Versions.supportLibrary}"
 
     val junit = "junit:junit:${Versions.junit}"
     val assertJ = "org.assertj:assertj-core:${Versions.assertJ}"
@@ -45,7 +46,7 @@ object Versions {
     val releaseVersionCode = 1
     val releaseVersionName = "1.0.0"
 
-    val appcompat = "27.1.1"
+    val supportLibrary = "27.1.1"
     val kotlin = "1.2.30"
     val retrofit = "2.4.0"
     val rxJava = "2.1.12"

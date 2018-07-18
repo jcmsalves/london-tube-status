@@ -4,7 +4,8 @@ import com.jcmsalves.domain.Mapper
 import com.jcmsalves.domain.status.model.LineStatus
 import com.jcmsalves.londontubestatus.R
 
-class LineStatusToLineStatusPresentationMapper : Mapper<LineStatus, LineStatusPresentation> {
+class LineStatusToLineStatusPresentationMapper:
+    Mapper<LineStatus, LineStatusPresentation> {
 
     override fun map(from: LineStatus): LineStatusPresentation {
         return LineStatusPresentation(
@@ -13,7 +14,7 @@ class LineStatusToLineStatusPresentationMapper : Mapper<LineStatus, LineStatusPr
             severityLevel = from.severityLevel,
             severityLevelDescription = from.severityLevelDescription,
             colourResourceId = mapSeverityColour(from.severityLevel),
-            badgeResourceId = mapLineBadge(from.name)
+            badgeResourceId = mapLineBadge(from.id)
         )
     }
 
