@@ -21,6 +21,8 @@ You can check all the articles below:
 
 5. [London Tube Status App - domain layer](https://medium.com/@jcmsalves/london-tube-status-app-domain-layer-711eddf4e572 "London Tube Status App - domain layer")
 
+6. [London Tube Status App - layouts and view model](https://medium.com/@jcmsalves/london-tube-status-app-presentation-layer-aa91d6665114 "London Tube Status App - layouts and view model")
+
 ----
 
 If you have any cool ideas or suggestions feel free to open issues in the repo and I'll try to address in a future article.
