@@ -1,7 +1,7 @@
 package com.jcmsalves.londontubestatus.status.model
 
-import com.jcmsalves.domain.status.model.LineStatus
-import com.jcmsalves.londontubestatus.R
+import com.jcmsalves.londontubestatus.status.getExpectedLineStatusPresentation
+import com.jcmsalves.londontubestatus.status.getLineStatus
 import org.assertj.core.api.SoftAssertions
 import org.junit.Test
 
@@ -33,25 +33,5 @@ class LineStatusToLineStatusPresentationMapperTest {
             assertThat(mappingResult.badgeResourceId)
                 .isEqualTo(expectedLineStatusPresentation.badgeResourceId)
         }.assertAll()
-    }
-
-    private fun getLineStatus(): LineStatus {
-        return LineStatus(
-            id = "central",
-            name = "Central Line",
-            severityLevel = "minor",
-            severityLevelDescription = "Minor Delays"
-        )
-    }
-
-    private fun getExpectedLineStatusPresentation(): LineStatusPresentation {
-        return LineStatusPresentation(
-            id = "central",
-            name = "Central Line",
-            severityLevel = "minor",
-            severityLevelDescription = "Minor Delays",
-            colourResourceId = R.color.colorOrange,
-            badgeResourceId = R.drawable.ic_central
-        )
     }
 }

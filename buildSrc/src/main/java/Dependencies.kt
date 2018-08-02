@@ -27,6 +27,7 @@ object ProjectDependencies {
     val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
 
     val supportAppCompat = "com.android.support:appcompat-v7:${Versions.supportLibrary}"
+    val supportDesign = "com.android.support:design:${Versions.supportLibrary}"
     val recyclerView = "com.android.support:recyclerview-v7:${Versions.supportLibrary}"
 
     val junit = "junit:junit:${Versions.junit}"

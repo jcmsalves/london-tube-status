@@ -6,7 +6,7 @@ import com.jcmsalves.domain.status.model.LineStatus
 import io.reactivex.Observable
 import javax.inject.Inject
 
-class GetLinesStatusInteractor @Inject constructor(
+open class GetLinesStatusInteractor @Inject constructor(
     private val statusRepository: StatusRepository,
     private val rxSchedulers: RxSchedulers
 ) : NoArgInteractor<List<LineStatus>> {

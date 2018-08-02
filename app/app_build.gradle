@@ -34,5 +34,6 @@ dependencies {
 
     // external dependencies
     implementation ProjectDependencies.supportAppCompat
+    implementation ProjectDependencies.supportDesign
     implementation ProjectDependencies.recyclerView
 }

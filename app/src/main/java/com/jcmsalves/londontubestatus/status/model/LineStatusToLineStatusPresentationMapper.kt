@@ -28,7 +28,6 @@ class LineStatusToLineStatusPresentationMapper:
 
     private fun mapLineBadge(lineId: String): Int =
         when (lineId) {
-
             "central" -> R.drawable.ic_central
             "piccadilly" -> R.drawable.ic_piccadilly
             "victoria" -> R.drawable.ic_victoria

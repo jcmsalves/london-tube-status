@@ -23,6 +23,8 @@ You can check all the articles below:
 
 6. [London Tube Status App - layouts and view model](https://medium.com/@jcmsalves/london-tube-status-app-presentation-layer-aa91d6665114 "London Tube Status App - layouts and view model")
 
+7. [London Tube Status App - MVP implementation](https://medium.com/@jcmsalves/london-tube-status-app-mvp-implementation-a5b73aa70a48 "London Tube Status App - MVP implementation")
+
 ----
 
 If you have any cool ideas or suggestions feel free to open issues in the repo and I'll try to address in a future article.

@@ -2,7 +2,7 @@ package com.jcmsalves.londontubestatus.di
 
 import com.jcmsalves.data.di.NetworkModule
 import com.jcmsalves.londontubestatus.App
-import com.jcmsalves.londontubestatus.MainActivity
+import com.jcmsalves.londontubestatus.status.StatusActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -15,5 +15,5 @@ import javax.inject.Singleton
 interface ApplicationComponent {
     fun inject(app: App)
 
-    fun inject(mainActivity: MainActivity)
+    fun inject(statusActivity: StatusActivity)
 }

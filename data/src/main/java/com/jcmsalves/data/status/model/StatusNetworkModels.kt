@@ -13,7 +13,7 @@ data class LineStatusModel(
 
 data class StatusModel(
     @SerializedName("statusSeverity")
-    val severityLevel: String,
+    val severityLevel: Int,
     @SerializedName("statusSeverityDescription")
     val severityLevelDescription: String
 )

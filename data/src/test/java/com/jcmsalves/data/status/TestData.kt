@@ -14,7 +14,7 @@ fun getLineStatusModel(): LineStatusModel {
 
 fun getStatusModel(): StatusModel {
     return StatusModel(
-        severityLevel = "severity_level",
+        severityLevel = 5,
         severityLevelDescription = "severity_level_description"
     )
 }
@@ -23,7 +23,7 @@ fun getExpectedLineStatus(): LineStatus {
     return LineStatus(
         id = "id",
         name = "name",
-        severityLevel = "severity_level",
+        severityLevel = "minor",
         severityLevelDescription = "severity_level_description"
     )
 }
