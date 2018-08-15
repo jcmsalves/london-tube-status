@@ -36,6 +36,7 @@ object ProjectDependencies {
     val mockitoKotlin = "com.nhaarman:mockito-kotlin:${Versions.mockitoKotlin}"
     val androidTestRunner = "com.android.support.test:runner:${Versions.androidTestRunner}"
     val espresso = "com.android.support.test.espresso:espresso-core:${Versions.espresso}"
+    val kakao = "com.agoda.kakao:kakao:${Versions.kakao}"
 }
 
 object Versions {
@@ -63,6 +64,7 @@ object Versions {
     val assertJ = "3.9.1"
     val mockito = "2.18.0"
     val mockitoKotlin = "1.5.0"
+    val kakao = "1.4.0"
 }
 
 

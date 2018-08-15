@@ -2,7 +2,7 @@
 
 This project follows a series of articles on Medium that follow the journey of creating a simple Android app to display London Underground lines statuses.
 
-It will be done using Clean Architecture and the plan is for it to be 100% Kotlin. Initially just code but eventually move gradle scripts to Kotlin as well using Kotlin DSL.
+It will be done using Clean Architecture and the plan is for it to be 100% Kotlin.
 
 Each article will be tagged in the ``article_#`` format so it's easier to track all changes.
 
@@ -25,6 +25,9 @@ You can check all the articles below:
 
 7. [London Tube Status App - MVP implementation](https://medium.com/@jcmsalves/london-tube-status-app-mvp-implementation-a5b73aa70a48 "London Tube Status App - MVP implementation")
 
+8. [London Tube Status App - UI tests and going live](https://medium.com/@jcmsalves/london-tube-status-app-ui-tests-and-going-live-7b9ca16c4c7a "London Tube Status App - UI tests and going live")
+
 ----
 
-If you have any cool ideas or suggestions feel free to open issues in the repo and I'll try to address in a future article.
+And now that the series is over you can download the app from the Google Play Store here:
+[London Tube Status App](https://play.google.com/store/apps/details?id=com.jcmsalves.londontubestatus "London Tube Status App")

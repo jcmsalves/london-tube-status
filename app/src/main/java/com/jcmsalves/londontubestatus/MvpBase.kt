@@ -14,8 +14,8 @@ interface Presenter<V : MvpView> {
 open class BasePresenter<T : MvpView> : Presenter<T> {
 
     var mvpView: T? = null
-    var compositeDisposable = CompositeDisposable()
-    var isViewAttached = mvpView != null
+    val compositeDisposable = CompositeDisposable()
+    val isViewAttached = mvpView != null
 
     override fun attachView(mvpView: T?) {
         this.mvpView = mvpView

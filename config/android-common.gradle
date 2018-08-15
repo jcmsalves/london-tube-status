@@ -19,4 +19,5 @@ dependencies {
     // testing dependencies
     androidTestImplementation ProjectDependencies.androidTestRunner
     androidTestImplementation ProjectDependencies.espresso
+    androidTestImplementation ProjectDependencies.kakao
 }
