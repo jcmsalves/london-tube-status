@@ -4,9 +4,8 @@ import com.jcmsalves.codewarsapi.domain.RxSchedulers
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import javax.inject.Inject
 
-class RxSchedulersImpl @Inject constructor() : RxSchedulers {
+class RxSchedulersImpl : RxSchedulers {
 
     override fun main(): Scheduler = AndroidSchedulers.mainThread()
 

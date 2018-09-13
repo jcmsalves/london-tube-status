@@ -7,11 +7,8 @@ repositories {
 }
 
 dependencies {
-    // dagger
-    implementation ProjectDependencies.daggerAndroid
-    implementation ProjectDependencies.daggerAndroidSupport
-    kapt ProjectDependencies.daggerAnnotationProcessor
-    kapt ProjectDependencies.daggerCompiler
+    // koin
+    implementation ProjectDependencies.koin
 
     // rxjava 2
     implementation ProjectDependencies.rxAndroid

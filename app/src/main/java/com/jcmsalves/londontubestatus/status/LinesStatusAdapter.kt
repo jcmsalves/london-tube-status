@@ -6,10 +6,8 @@ import android.view.*
 import com.jcmsalves.londontubestatus.R
 import com.jcmsalves.londontubestatus.status.model.LineStatusPresentation
 import kotlinx.android.synthetic.main.item_line_status.view.*
-import javax.inject.Inject
 
-class LinesStatusAdapter @Inject
-constructor() : RecyclerView.Adapter<LineStatusViewHolder>() {
+class LinesStatusAdapter : RecyclerView.Adapter<LineStatusViewHolder>() {
 
     private val linesStatus = ArrayList<LineStatusPresentation>()
 

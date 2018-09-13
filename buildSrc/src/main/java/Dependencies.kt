@@ -17,11 +17,7 @@ object ProjectDependencies {
     val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 
-    val daggerAndroid = "com.google.dagger:dagger-android:${Versions.dagger}"
-    val daggerAndroidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
-    val daggerAnnotationProcessor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
-    val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
-    val javaInject = "javax.inject:javax.inject:${Versions.javaxInject}"
+    val koin = "org.koin:koin-android:${Versions.koin}"
 
     val rxJava2 = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
     val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
@@ -45,8 +41,8 @@ object Versions {
     val compileSdk = 27
     val targetSdk = 27
     val minSdkVersion = 21
-    val releaseVersionCode = 1
-    val releaseVersionName = "1.0.0"
+    val releaseVersionCode = 2
+    val releaseVersionName = "1.0.1"
 
     val supportLibrary = "27.1.1"
     val kotlin = "1.2.30"
@@ -54,9 +50,8 @@ object Versions {
     val rxJava = "2.1.12"
     val rxAndroid = "2.0.2"
     val loggingInterceptor = "3.10.0"
-    val dagger = "2.13"
-    val javaxInject = "1"
     val ktlint = "0.20.0"
+    val koin = "1.0.0-RC-3"
 
     val junit = "4.12"
     val androidTestRunner = "1.0.1"

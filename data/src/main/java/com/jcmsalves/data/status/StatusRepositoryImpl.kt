@@ -4,9 +4,8 @@ import com.jcmsalves.data.status.model.LineStatusModelToLineStatusMapper
 import com.jcmsalves.domain.status.StatusRepository
 import com.jcmsalves.domain.status.model.LineStatus
 import io.reactivex.Single
-import javax.inject.Inject
 
-class StatusRepositoryImpl @Inject constructor(
+class StatusRepositoryImpl constructor(
     private val statusService: StatusService,
     private val mapper: LineStatusModelToLineStatusMapper
 ) : StatusRepository {
