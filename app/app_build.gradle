@@ -36,4 +36,7 @@ dependencies {
     implementation ProjectDependencies.supportAppCompat
     implementation ProjectDependencies.supportDesign
     implementation ProjectDependencies.recyclerView
+    implementation ProjectDependencies.lifecycle
+
+    testImplementation ProjectDependencies.lifecycleTesting
 }

@@ -1,45 +1,49 @@
-package com.jcmsalves.londontubestatus.status.presenter
+package com.jcmsalves.londontubestatus.status.viewmodel
 
+import android.arch.core.executor.testing.InstantTaskExecutorRule
 import com.jcmsalves.domain.status.GetLinesStatusInteractor
 import com.jcmsalves.londontubestatus.status.getExpectedLineStatusPresentation
 import com.jcmsalves.londontubestatus.status.getLineStatus
 import com.jcmsalves.londontubestatus.status.model.LineStatusToLineStatusPresentationMapper
-import com.jcmsalves.londontubestatus.status.view.StatusView
-import com.nhaarman.mockito_kotlin.*
+import com.nhaarman.mockito_kotlin.mock
+import com.nhaarman.mockito_kotlin.verify
+import com.nhaarman.mockito_kotlin.whenever
 import io.reactivex.Observable
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.mockito.MockitoAnnotations
 
-class StatusPresenterTest {
+class StatusViewModelTest {
+
+    @Rule
+    @JvmField
+    val rule = InstantTaskExecutorRule()
 
     private val mockGetLinesStatusInteractor = mock<GetLinesStatusInteractor>()
-    private val mockStatusView = mock<StatusView>()
-    private lateinit var statusPresenter: StatusPresenter
+    private lateinit var statusViewModel: StatusViewModel
 
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-        statusPresenter = StatusPresenter(
-            mockGetLinesStatusInteractor,
-            LineStatusToLineStatusPresentationMapper()
-        )
+        statusViewModel = StatusViewModel(mockGetLinesStatusInteractor,
+            LineStatusToLineStatusPresentationMapper())
     }
 
     @Test
-    fun shouldTriggerShowErrorWhenItFailsToGetLinesStatus() {
+    fun shouldPostErrorStateWhenItFailsToGetLinesStatus() {
         // given
         val throwable = Throwable()
         whenever(mockGetLinesStatusInteractor.execute())
             .thenReturn(Observable.error(throwable))
 
         // when
-        statusPresenter.attachView(mockStatusView)
+        statusViewModel.fetchLinesStatus()
 
         // then
-        verify(mockStatusView).showLoading(true)
-        verify(mockStatusView).showError()
-        verify(mockStatusView).showLoading(false)
+        verify(mockGetLinesStatusInteractor).execute()
+        assert(statusViewModel.linesStatusLiveData.value
+            == StatusState.Error)
     }
 
     @Test
@@ -49,11 +53,11 @@ class StatusPresenterTest {
             .thenReturn(Observable.just(listOf(getLineStatus())))
 
         // when
-        statusPresenter.attachView(mockStatusView)
+        statusViewModel.fetchLinesStatus()
 
         // then
-        verify(mockStatusView).showLoading(true)
-        verify(mockStatusView).showLinesStatus(listOf(getExpectedLineStatusPresentation()))
-        verify(mockStatusView).showLoading(false)
+        verify(mockGetLinesStatusInteractor).execute()
+        assert(statusViewModel.linesStatusLiveData.value
+            == StatusState.Data(listOf(getExpectedLineStatusPresentation())))
     }
 }

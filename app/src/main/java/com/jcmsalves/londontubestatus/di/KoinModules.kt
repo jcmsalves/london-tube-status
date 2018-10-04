@@ -8,16 +8,14 @@ import com.jcmsalves.domain.status.GetLinesStatusInteractor
 import com.jcmsalves.domain.status.StatusRepository
 import com.jcmsalves.londontubestatus.status.LinesStatusAdapter
 import com.jcmsalves.londontubestatus.status.model.LineStatusToLineStatusPresentationMapper
-import com.jcmsalves.londontubestatus.status.presenter.StatusPresenter
+import com.jcmsalves.londontubestatus.status.viewmodel.StatusViewModel
+import org.koin.android.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
 
 val appModule = module {
     single<RxSchedulers> { RxSchedulersImpl() }
-}
-
-val viewsModule = module {
-    factory { StatusPresenter(get(), get()) }
     factory { LinesStatusAdapter() }
+    viewModel { StatusViewModel(get(), get()) }
 }
 
 val interactorsModule = module {

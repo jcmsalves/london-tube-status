@@ -29,6 +29,8 @@ You can check all the articles below:
 
 9. [London Tube Status App - from dagger to koin](https://medium.com/@jcmsalves/london-tube-status-app-from-dagger-to-koin-17f96dbf8e0b "London Tube Status App - from dagger to koin")
 
+10. [London Tube Status App - from MVP to MVVM](https://medium.com/@jcmsalves/london-tube-status-app-from-mvp-to-mvvm-2bf73fb3da47 "London Tube Status App - from MVP to MVVM")
+
 ----
 
 And now that the series is over you can download the app from the Google Play Store here:

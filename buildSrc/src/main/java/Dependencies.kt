@@ -18,6 +18,7 @@ object ProjectDependencies {
     val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 
     val koin = "org.koin:koin-android:${Versions.koin}"
+    val koinViewModel = "org.koin:koin-android-viewmodel:${Versions.koin}"
 
     val rxJava2 = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
     val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
@@ -25,14 +26,17 @@ object ProjectDependencies {
     val supportAppCompat = "com.android.support:appcompat-v7:${Versions.supportLibrary}"
     val supportDesign = "com.android.support:design:${Versions.supportLibrary}"
     val recyclerView = "com.android.support:recyclerview-v7:${Versions.supportLibrary}"
-
     val junit = "junit:junit:${Versions.junit}"
+
     val assertJ = "org.assertj:assertj-core:${Versions.assertJ}"
     val mockito = "org.mockito:mockito-core:${Versions.mockito}"
     val mockitoKotlin = "com.nhaarman:mockito-kotlin:${Versions.mockitoKotlin}"
     val androidTestRunner = "com.android.support.test:runner:${Versions.androidTestRunner}"
     val espresso = "com.android.support.test.espresso:espresso-core:${Versions.espresso}"
     val kakao = "com.agoda.kakao:kakao:${Versions.kakao}"
+
+    val lifecycle = "android.arch.lifecycle:extensions:${Versions.lifecycle}"
+    val lifecycleTesting = "android.arch.core:core-testing:${Versions.lifecycle}"
 }
 
 object Versions {
@@ -51,7 +55,8 @@ object Versions {
     val rxAndroid = "2.0.2"
     val loggingInterceptor = "3.10.0"
     val ktlint = "0.20.0"
-    val koin = "1.0.0-RC-3"
+    val koin = "1.0.1"
+    val lifecycle = "1.1.1"
 
     val junit = "4.12"
     val androidTestRunner = "1.0.1"
