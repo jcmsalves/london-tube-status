@@ -14,8 +14,9 @@ dependencies {
     // kotlin
     implementation ProjectDependencies.kotlin
 
-    // rxjava 2
-    implementation ProjectDependencies.rxJava2
+    // coroutines
+    implementation ProjectDependencies.coroutines
+    implementation ProjectDependencies.coroutinesCore
 
     // testing dependencies
     testImplementation ProjectDependencies.junit

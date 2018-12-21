@@ -11,9 +11,6 @@ dependencies {
     implementation ProjectDependencies.koin
     implementation ProjectDependencies.koinViewModel
 
-    // rxjava 2
-    implementation ProjectDependencies.rxAndroid
-
     // testing dependencies
     androidTestImplementation ProjectDependencies.androidTestRunner
     androidTestImplementation ProjectDependencies.espresso

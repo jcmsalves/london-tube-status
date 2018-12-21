@@ -35,7 +35,7 @@ dependencies {
 
     // retrofit / network dependencies
     api ProjectDependencies.retrofit
-    implementation ProjectDependencies.rxJava2Adapter
+    implementation ProjectDependencies.coroutinesAdapter
     implementation ProjectDependencies.gson
     implementation ProjectDependencies.loggingInterceptor
 }

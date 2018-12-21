@@ -31,6 +31,8 @@ You can check all the articles below:
 
 10. [London Tube Status App - from MVP to MVVM](https://medium.com/@jcmsalves/london-tube-status-app-from-mvp-to-mvvm-2bf73fb3da47 "London Tube Status App - from MVP to MVVM")
 
+11. [London Tube Status App - from Rx to Coroutines](https://medium.com/@jcmsalves/london-tube-status-app-from-rx-to-coroutines-952284158965 "London Tube Status App - from Rx to Coroutines")
+
 ----
 
 And now that the series is over you can download the app from the Google Play Store here:

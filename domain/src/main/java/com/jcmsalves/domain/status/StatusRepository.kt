@@ -1,9 +1,8 @@
 package com.jcmsalves.domain.status
 
-import com.jcmsalves.domain.status.model.LineStatus
-import io.reactivex.Single
+import com.jcmsalves.domain.status.model.StatusResult
 
 interface StatusRepository {
 
-    fun getLinesStatus(): Single<List<LineStatus>>
+    suspend fun getLinesStatus(): StatusResult
 }

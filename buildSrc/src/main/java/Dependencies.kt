@@ -9,19 +9,19 @@ object ProjectModules {
 }
 
 object ProjectDependencies {
-    val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jre7:${Versions.kotlin}"
+    val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val ktlint = "com.github.shyiko:ktlint:${Versions.ktlint}"
 
     val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    val rxJava2Adapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 
     val koin = "org.koin:koin-android:${Versions.koin}"
     val koinViewModel = "org.koin:koin-android-viewmodel:${Versions.koin}"
 
-    val rxJava2 = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
-    val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
+    val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+    val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    val coroutinesAdapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.coroutinesAdapter}"
 
     val supportAppCompat = "com.android.support:appcompat-v7:${Versions.supportLibrary}"
     val supportDesign = "com.android.support:design:${Versions.supportLibrary}"
@@ -49,10 +49,11 @@ object Versions {
     val releaseVersionName = "1.0.1"
 
     val supportLibrary = "27.1.1"
-    val kotlin = "1.2.30"
+    val kotlin = "1.3.0"
     val retrofit = "2.4.0"
-    val rxJava = "2.1.12"
-    val rxAndroid = "2.0.2"
+    val coroutines = "1.0.1"
+    val coroutinesAdapter = "0.9.2"
+
     val loggingInterceptor = "3.10.0"
     val ktlint = "0.20.0"
     val koin = "1.0.1"
